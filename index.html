@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarePoint | Patient Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">✚ CarePoint</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#registration">Patient Registration</a></li>
+          <li class="nav-item"><a class="nav-link" href="#appointments">Appointments</a></li>
+          <li class="nav-item"><a class="nav-link" href="#health">Health Information</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#technologies">Technologies</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <span class="eyebrow">YOUR HEALTH, OUR PRIORITY</span>
+          <h1>Healthcare made <span>simple.</span></h1>
+          <p class="lead">Book appointments, manage your visits, and keep your health information organized in one place.</p>
+          <a class="btn btn-primary btn-lg me-2" href="#registration">Book an Appointment</a>
+          <a class="btn btn-outline-primary btn-lg mt-2 mt-sm-0" href="#services">Explore Services</a>
+        </div>
+        <div class="col-lg-5">
+          <div class="hero-card">
+            <div class="medical-icon">✚</div>
+            <h3>Care that puts you first</h3>
+            <p class="mb-0">A simple portal for your appointment and patient information.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="registration" class="section-pad">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">GET STARTED</span>
+          <h2>Patient Registration</h2>
+          <p>Enter your details to schedule an appointment.</p>
+        </div>
+        <form id="patientForm" class="row g-4 needs-validation" novalidate>
+          <div class="col-12">
+            <div class="card form-card">
+              <div class="card-header">👤 Personal Information</div>
+              <div class="card-body row g-3">
+                <div class="col-md-6">
+                  <label for="patientName" class="form-label">Patient Name *</label>
+                  <input id="patientName" name="patientName" class="form-control" type="text" required minlength="2" placeholder="Enter full name">
+                  <div class="invalid-feedback">Please enter the patient's name.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email *</label>
+                  <input id="email" name="email" class="form-control" type="email" required placeholder="name@example.com">
+                  <div class="invalid-feedback">Enter a valid email address.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="mobile" class="form-label">Mobile Number *</label>
+                  <input id="mobile" name="mobile" class="form-control" type="tel" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number">
+                  <div class="invalid-feedback">Enter a 10-digit mobile number.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="dob" class="form-label">Date of Birth *</label>
+                  <input id="dob" name="dob" class="form-control" type="date" required>
+                  <div class="invalid-feedback">Select date of birth.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="gender" class="form-label">Gender *</label>
+                  <select id="gender" name="gender" class="form-select" required>
+                    <option value="">Choose gender</option><option>Female</option><option>Male</option><option>Other</option><option>Prefer not to say</option>
+                  </select>
+                  <div class="invalid-feedback">Please select gender.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="bloodGroup" class="form-label">Blood Group *</label>
+                  <select id="bloodGroup" name="bloodGroup" class="form-select" required>
+                    <option value="">Choose blood group</option>
+                    <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+                    <option>AB+</option><option>AB-</option><option>O+</option><option>O-</option><option>Unknown</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a blood group.</div>
+                </div>
+                <div class="col-12">
+                  <label for="address" class="form-label">Address *</label>
+                  <textarea id="address" name="address" class="form-control" rows="2" required placeholder="Enter your full address"></textarea>
+                  <div class="invalid-feedback">Please enter your address.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="card form-card">
+              <div class="card-header">🩺 Appointment Details</div>
+              <div class="card-body row g-3">
+                <div class="col-md-6">
+                  <label for="department" class="form-label">Department *</label>
+                  <select id="department" name="department" class="form-select" required>
+                    <option value="">Choose department</option>
+                    <option>Cardiology</option><option>Dermatology</option><option>General Medicine</option>
+                    <option>Neurology</option><option>Orthopedics</option><option>Pediatrics</option>
+                  </select>
+                  <div class="invalid-feedback">Select a department.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="doctor" class="form-label">Doctor *</label>
+                  <select id="doctor" name="doctor" class="form-select" required>
+                    <option value="">Choose doctor</option>
+                    <option>Dr. Arun Kumar</option><option>Dr. Meera Ravi</option>
+                    <option>Dr. Priya Sharma</option><option>Dr. Karthik Raj</option>
+                  </select>
+                  <div class="invalid-feedback">Select a doctor.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="appointmentDate" class="form-label">Appointment Date *</label>
+                  <input id="appointmentDate" name="appointmentDate" class="form-control" type="date" required>
+                  <div class="invalid-feedback">Choose today or a future date.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="appointmentTime" class="form-label">Appointment Time *</label>
+                  <input id="appointmentTime" name="appointmentTime" class="form-control" type="time" required>
+                  <div class="invalid-feedback">Choose an appointment time.</div>
+                </div>
+                <div class="col-12">
+                  <label for="symptoms" class="form-label">Symptoms / Health Concern *</label>
+                  <textarea id="symptoms" name="symptoms" class="form-control" rows="3" required placeholder="Briefly describe your health concern"></textarea>
+                  <div class="invalid-feedback">Please describe your health concern.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 d-flex gap-3 flex-wrap">
+            <button class="btn btn-primary btn-lg" type="submit">Register Appointment</button>
+            <button class="btn btn-outline-secondary btn-lg" type="reset">Reset Form</button>
+          </div>
+          <div class="col-12"><div id="formMessage" class="alert d-none" role="alert"></div></div>
+        </form>
+      </div>
+    </section>
+
+    <section id="appointments" class="section-pad section-soft">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">YOUR VISITS</span>
+          <h2>Appointments</h2>
+          <p>Appointments registered during this session appear below.</p>
+        </div>
+        <div class="card table-card">
+          <div class="table-responsive">
+            <table class="table align-middle mb-0">
+              <thead><tr><th>Appointment ID</th><th>Patient Name</th><th>Department</th><th>Doctor</th><th>Date</th><th>Time</th><th>Status</th></tr></thead>
+              <tbody id="appointmentRows"><tr id="emptyAppointments"><td colspan="7" class="text-center py-4 text-secondary">No appointments registered yet.</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="health" class="section-pad">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">PATIENT RECORD</span>
+          <h2>Health Information</h2>
+          <p>Your latest registration details will be shown here.</p>
+        </div>
+        <div id="healthInfo" class="row g-3">
+          <div class="col-12"><div class="empty-health">Register an appointment to display patient health information.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section-pad section-soft">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">OUR DEPARTMENTS</span><h2>Healthcare Services</h2><p>Choose a department that matches your appointment needs.</p></div>
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-4"><div class="service-card"><div class="service-icon">♡</div><h5>Cardiology</h5><p>Care and consultation related to heart health.</p></div></div>
+          <div class="col-sm-6 col-lg-4"><div class="service-card"><div class="service-icon">✦</div><h5>Dermatology</h5><p>Consultations for skin, hair, and nail concerns.</p></div></div>
+          <div class="col-sm-6 col-lg-4"><div class="service-card"><div class="service-icon">✚</div><h5>General Medicine</h5><p>General health consultations and routine care.</p></div></div>
+          <div class="col-sm-6 col-lg-4"><div class="service-card"><div class="service-icon">◉</div><h5>Neurology</h5><p>Consultations for the brain and nervous system.</p></div></div>
+          <div class="col-sm-6 col-lg-4"><div class="service-card"><div class="service-icon">⌁</div><h5>Orthopedics</h5><p>Care related to bones, joints, and movement.</p></div></div>
+          <div class="col-sm-6 col-lg-4"><div class="service-card"><div class="service-icon">☼</div><h5>Pediatrics</h5><p>Healthcare services for infants and children.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="technologies" class="section-pad">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">BUILT WITH</span><h2>Technologies</h2><p>Tools used to create this responsive front-end project.</p></div>
+        <div class="row g-3 justify-content-center">
+          <div class="col-md-4"><div class="tech-card"><strong>HTML5</strong><span>Structure & form validation</span></div></div>
+          <div class="col-md-4"><div class="tech-card"><strong>CSS3</strong><span>Custom styles & responsive design</span></div></div>
+          <div class="col-md-4"><div class="tech-card"><strong>Bootstrap 5</strong><span>Responsive layout & UI components</span></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><span>© 2026 CarePoint Patient Portal</span><span>Front-End Project · HTML5 · CSS3 · Bootstrap 5</span></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+:root{--navy:#123b56;--teal:#16a6a0;--ink:#183447;--muted:#647887;--pale:#f2f8fa}
+*{scroll-margin-top:82px}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:#fff}
+h1,h2,h3,h4,h5,.navbar-brand{font-family:'Manrope',sans-serif}
+.navbar{background:var(--navy);box-shadow:0 4px 18px #102f421c}
+.navbar-brand{font-size:1.35rem;letter-spacing:-.5px}
+.nav-link{font-size:.92rem;font-weight:500;margin-left:.35rem}
+.nav-link:hover{color:#8de8df!important}
+.hero{padding:155px 0 100px;background:linear-gradient(120deg,#f0fafb,#f8fbff 65%,#e5f7f4);overflow:hidden}
+.eyebrow{font-size:.75rem;font-weight:700;letter-spacing:2px;color:var(--teal)}
+.hero h1{font-size:clamp(2.7rem,5vw,4.5rem);font-weight:800;line-height:1.1;letter-spacing:-2px;margin:18px 0}
+.hero h1 span{color:var(--teal)}
+.hero .lead{max-width:590px;color:var(--muted);line-height:1.8;margin-bottom:28px}
+.btn-primary{background:var(--teal);border-color:var(--teal)}
+.btn-primary:hover{background:#118782;border-color:#118782}
+.btn-outline-primary{color:var(--teal);border-color:var(--teal)}
+.btn-outline-primary:hover{background:var(--teal);border-color:var(--teal)}
+.hero-card{background:white;border-radius:28px;padding:50px 38px;box-shadow:0 22px 65px #123b5612;border:1px solid #e4f1f2}
+.medical-icon{width:84px;height:84px;display:grid;place-items:center;background:#e4f8f5;color:var(--teal);font-size:3rem;border-radius:24px;margin-bottom:26px}
+.hero-card h3{font-weight:800;font-size:1.65rem}.hero-card p{color:var(--muted);line-height:1.8}
+.section-pad{padding:85px 0}
+.section-soft{background:var(--pale)}
+.section-heading{text-align:center;margin:0 auto 42px;max-width:680px}
+.section-heading h2{font-size:clamp(2rem,4vw,2.7rem);font-weight:800;letter-spacing:-1px;margin:10px 0}
+.section-heading p{color:var(--muted);margin:0}
+.form-card,.table-card{border:1px solid #e4edf0;border-radius:16px;overflow:hidden;box-shadow:0 8px 26px #153a4a08}
+.form-card .card-header{background:#f5fbfb;border-bottom:1px solid #e4edf0;padding:18px 24px;font-weight:700;color:var(--navy)}
+.form-card .card-body{padding:25px}
+.form-label{font-weight:600;font-size:.92rem}
+.form-control,.form-select{padding:12px 14px;border-color:#d9e5e9;border-radius:9px}
+.form-control:focus,.form-select:focus{border-color:var(--teal);box-shadow:0 0 0 .2rem #16a6a01a}
+.table-card{background:#fff}
+.table thead th{background:var(--navy);color:white;font-size:.82rem;font-weight:600;white-space:nowrap;padding:17px}
+.table tbody td{font-size:.88rem;padding:16px}
+.status-badge{display:inline-block;padding:6px 10px;border-radius:30px;background:#fff3d6;color:#8a6200;font-size:.76rem;font-weight:700}
+.empty-health{background:#f5fbfb;border:1px dashed #bfd9dc;border-radius:14px;text-align:center;padding:32px;color:var(--muted)}
+.info-card{height:100%;border:1px solid #e4edf0;border-radius:14px;padding:22px;background:#fff;box-shadow:0 8px 25px #153a4a08}
+.info-card small{display:block;color:var(--muted);font-size:.78rem;margin-bottom:8px}
+.info-card strong{font-size:1rem;overflow-wrap:anywhere}
+.service-card{height:100%;background:white;border:1px solid #e4edf0;border-radius:16px;padding:28px;transition:transform .2s,box-shadow .2s}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 15px 35px #153a4a10}
+.service-icon{width:52px;height:52px;display:grid;place-items:center;border-radius:15px;background:#e4f8f5;color:var(--teal);font-size:1.7rem;margin-bottom:20px}
+.service-card h5{font-weight:800}.service-card p{color:var(--muted);font-size:.92rem;line-height:1.7;margin:0}
+.tech-card{height:100%;padding:26px;border-radius:15px;background:#f5fbfb;border:1px solid #e1eeee;text-align:center}
+.tech-card strong{display:block;color:var(--teal);font-family:'Manrope',sans-serif;font-size:1.4rem;margin-bottom:8px}
+.tech-card span{color:var(--muted);font-size:.9rem}
+.footer{background:var(--navy);color:#d3e4eb;padding:25px 0;font-size:.85rem}
+@media(max-width:991px){.navbar-collapse{padding:12px 0}.nav-link{padding:9px 0}.hero{padding:125px 0 70px}.hero-card{padding:32px}}
+@media(max-width:575px){.section-pad{padding:62px 0}.form-card .card-body{padding:18px}.hero h1{letter-spacing:-1px}.hero .btn{width:100%;margin:6px 0!important}}
